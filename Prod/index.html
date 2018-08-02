@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Grocery</title>
+<link rel="stylesheet" href="jquery.mobile-1.4.4.min.css">
+<link rel="stylesheet" href="green.css" />
+<link rel="stylesheet" href="jquery.mobile.icons.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="jquery.mobile-1.4.4.min.js"></script>
+<!-- <script src="jquery-3.3.1.min.js"></script> -->
+</head>
+<body>
+
+<script>
+$("h1").dblclick(function(){
+    $(this).hide();
+});
+
+</script>
+
+
+	<div data-role="page" data-theme="a">
+		<div data-role="header" data-position="inline">
+			<h3>Mobile Food App</h3>
+			<h1>Get Food Through Your Phone</h1>
+
+		</div>
+		<div data-role="content" data-theme="a">
+			<a href="https://www.shipt.com" class="ui-btn">Shipt</a><br><br>
+			<button class="ui-btn">Sign In</button>
+			<button class="ui-btn">Sign Up</button><br>
+
+			<img src="orange.jpg" vspace="100" alt="Big Orange">
+
+			<form action="/action_page.php">
+				<label for="text-basic">Email:</label>
+				<input name="email" id="email" value="" type="text" data-theme="a">
+
+
+				<label for="text-basic">Item:</label>
+				<input name="item" id="item" value="" type="text" data-theme="a">
+
+				<label for="text-basic">Zip:</label>
+				<input name="zip" id="zip" value="" type="text" data-theme="a">
+
+				<label for="text-basic">Price:</label>
+				<input name="price" id="price" value="" type="text" data-theme="a">	
+				<br><br>
+				<input value="Submit" type="submit">
+			</form>
+		</div>
+	</div>
+
+
+</body>
+</html>
