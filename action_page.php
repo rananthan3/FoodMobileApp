@@ -54,23 +54,13 @@ mysqli_close($link);
     color: white;
 }
 </style>
-<link rel="stylesheet" href="jquery.mobile-1.4.4.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-<script src="jquery.mobile-1.4.4.min.js"></script>
-<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-<!-- <script type="text/javascript" class="init">
-	$(document).ready(function() {
-		$('#example').DataTable();
-	} );
-</script> -->
 </head>
 <body>
 
 Welcome <?php echo $_GET["email"]; ?><br>
 Your email address is: <?php echo $_GET["email"]; ?>
 
-<div data-role="page" id="page1">
-	<div role="main" class="ui-content">
+
 
 	<?php
 
@@ -87,23 +77,23 @@ Your email address is: <?php echo $_GET["email"]; ?>
 
 
 
-	echo "<table border='1' data-role='table'  id='example' data-mode='reflow' class='ui-responsive' style='width:100%'>
-	<tr>
-	<th>Email</th>
-	<th>Item</th>
-	<th>Zip</th>
-	<th>Price</th>
-	<th>Date</th>
+	echo "<table border='1'  id='example' style='width:100%'>
+	<tr id='example'>
+	<th id='example'>Email</th>
+	<th id='example'>Item</th>
+	<th id='example'>Zip</th>
+	<th id='example'>Price</th>
+	<th id='example'>Date</th>
 	</tr>";
 
 	while($row = mysqli_fetch_array($result))
 	{
-	echo "<tr>";
-	echo "<td>" . $row['Email'] . "</td>";
-	echo "<td>" . $row['Item'] . "</td>";
-	echo "<td>" . $row['Zip'] . "</td>";
-	echo "<td>" . $row['Price'] . "</td>";
-	echo "<td>" . $row['Date'] . "</td>";
+	echo "<tr id='example'>";
+	echo "<td id='example'>" . $row['Email'] . "</td>";
+	echo "<td id='example'>" . $row['Item'] . "</td>";
+	echo "<td id='example'>" . $row['Zip'] . "</td>";
+	echo "<td id='example'>" . $row['Price'] . "</td>";
+	echo "<td id='example'>" . $row['Date'] . "</td>";
 	echo "</tr>";
 	}
 	echo "</table>";
@@ -111,8 +101,6 @@ Your email address is: <?php echo $_GET["email"]; ?>
 	mysqli_close($con);
 	?>
 
-	</div>
-</div>
 
 
 </body>

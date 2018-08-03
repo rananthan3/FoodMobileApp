@@ -7,8 +7,33 @@
 <link rel="stylesheet" href="jquery.mobile.icons.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="jquery.mobile-1.4.4.min.js"></script>
-<!-- <script src="jquery-3.3.1.min.js"></script> -->
+<style>
+#example {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#example td, #example th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#example tr:nth-child(even){background-color: #f2f2f2;}
+
+#example tr:hover {background-color: #ddd;}
+
+#example th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
 </head>
+
+
 <body>
 
 <script>
@@ -27,8 +52,12 @@ $("h1").dblclick(function(){
 		</div>
 		<div data-role="content" data-theme="a">
 			<a href="https://www.shipt.com" class="ui-btn">Shipt</a><br><br>
-			<button class="ui-btn">Sign In</button>
-			<button class="ui-btn">Sign Up</button><br>
+			<form action="login/signup.php">
+			    <input type="submit" value="Sign Up" />
+			</form>
+			<form action="login/signin.php">
+			    <input type="submit" value="Sign In" />
+			</form><br>
 
 			<img src="orange.jpg" vspace="100" alt="Big Orange">
 
