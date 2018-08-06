@@ -98,7 +98,7 @@ Your email address is: <?php echo $_GET["email"]; ?>
 	}
 	echo "</table>";
 
-	mysqli_close($con);
+	mysqli_close($link);
 	?>
 
 
