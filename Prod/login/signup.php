@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="../green.css" />
-<link rel="stylesheet" href="../jquery.mobile.icons.min.css" />
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -13,7 +12,7 @@
 
 
 <div data-role="page" data-theme="a" style="padding:50px;"> 
-  <form action="action_page.php" style="border:1px solid #ccc">
+  <form method="post" action="register.php" data-ajax="false" style="border:1px solid #ccc">
       <div data-role="header">
         <h1>Sign Up</h1>
         <p>Please fill in this form to create an account.</p>
@@ -36,7 +35,7 @@
 
 
         <button type="button" class="cancelbtn">Cancel</button>
-      	<button type="submit" class="signupbtn">Sign Up</button>
+      	<button type="submit" class="signupbtn" name="submit">Sign Up</button>
 
       </div>
 

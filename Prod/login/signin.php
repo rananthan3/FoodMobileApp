@@ -3,8 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1"> 
-<link rel="stylesheet" href="../green.css" />
-<link rel="stylesheet" href="../jquery.mobile.icons.min.css" />
+
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -12,17 +11,17 @@
 <body class="ui-mobile-viewport ui-overlay-a">
 
 <div data-role="page" data-theme="a" style="padding:50px;">	
-	<form action="action_page.php">
+	<form action="authenticate.php" method="post"  data-ajax="false">
 
 	<div data-role="content" data-theme="a">
 	  
 	    <label for="uname"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="uname"><br>
+	    <input type="text" placeholder="Enter Username" name="username"><br>
 
 	    <label for="psw"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="psw" required="">
+	    <input type="password" placeholder="Enter Password" name="password" required="">
 
-	    <button type="submit">Login</button>
+	    <button type="submit" name="submit">Login</button>
 	    <label>
 	       Remember me
 	    </label>
@@ -38,3 +37,4 @@
 	</form>
 </div>
 </body>
+</html> 	
