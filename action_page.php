@@ -30,6 +30,8 @@ mysqli_close($link);
 
 <html>
 <head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 <style>
 #example {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
