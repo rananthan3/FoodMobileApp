@@ -9,7 +9,7 @@
   // var_dump($_GET);
 
  
-  $mysqli = new mysqli("localhost", "root", "root", "demo");
+   include_once("db.php");
 
 
    if (!isset($_POST['password']) || !isset($_POST['username']))
@@ -34,7 +34,9 @@
       if(!$veri_password === TRUE){
         echo("Error");
       } else {
-        echo("Success");
+        session_start();
+        $_SESSION['login']=$email;
+        header("location: cart.php");
       }
     }
   } else {

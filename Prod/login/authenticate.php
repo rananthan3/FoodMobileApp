@@ -8,8 +8,7 @@
   // var_dump($_REQUEST);
   // var_dump($_GET);
 
- 
-  $mysqli = new mysqli("localhost", "id6704534_root", "rootroot", "id6704534_demo");
+ include_once("db.php");
 
 
    if (!isset($_POST['password']) || !isset($_POST['username']))

@@ -27,6 +27,9 @@ if(isset($_POST['submit'])){
 		if($result)
 		{
 			echo "Registration successfully";
+			session_start();
+			$_SESSION['login']=$email;
+			header("location: cart.php");
 		}
 	}
 	mysqli_close($link);
