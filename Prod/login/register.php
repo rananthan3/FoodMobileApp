@@ -1,6 +1,9 @@
 <?php
  include_once("db.php");
 
+ session_start();
+ ob_start();
+
  if (!isset($_POST['psw']) || !isset($_POST['psw-repeat']))
  {
  	header('Location: signup.php');
@@ -27,6 +30,9 @@ if(isset($_POST['submit'])){
 		if($result)
 		{
 			echo "Registration successfully";
+			
+			$_SESSION['login']=$email;
+			header("location: cart.php");
 		}
 	}
 	mysqli_close($link);

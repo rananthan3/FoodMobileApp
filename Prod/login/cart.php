@@ -164,48 +164,11 @@
 
 <div data-role="page" data-theme="b" id="demo-page" class="my-page" data-url="demo-page">
     <div data-role="header">
-        <center>
-        <img src="logo.png" alt="Welcome to Suvidha Online" style="width:109px;height:55.5px;">
-        </center>
+        <h3>Market</h3>
         <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
     </div><!-- /header -->
     <div role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
-
-           <li><a href="#">
-                <img src="bread.jpeg" class="ui-li-thumb">
-                <h2>Bread</h2>                
-            </a></li>
-            <li><a href="#">
-                <img src="rice.jpeg" class="ui-li-thumb">
-                <h2>Rice</h2>                
-            </a></li>
-            <li><a href="#">
-                <img src="sweets.jpeg" class="ui-li-thumb">
-                <h2>Sweets</h2>                
-            </a></li>
-            <li><a href="#">
-                <img src="produce.jpeg" class="ui-li-thumb">
-                <h2>Produce</h2>
-            </a></li>
-            <li><a href="#">
-                <img src="dairy.jpeg" class="ui-li-thumb">
-                <h2>Dairy</h2>                
-            </a></li>
-            <li><a href="#">
-                <img src="lentils.jpeg" class="ui-li-thumb">
-                <h2>Lentils</h2>                
-            </a></li>
-            <li><a href="#">
-                <img src="tea.jpeg" class="ui-li-thumb">
-                <h2>Tea &amp; Coffee</h2>                
-            </a></li>
-            <li><a href="#">                
-                <img src="spices.jpeg" class="ui-li-thumb">
-                <h2>Spices</h2>                
-            </a></li>
-
-
             <li><a href="#">
                 <img src="apple.jpeg" class="ui-li-thumb">
                 <h2>$1.99/lb</h2>                

@@ -1,8 +1,8 @@
 <?php
 
-  ini_set('display_errors', 1);
-  ini_set('display_startup_errors', 1);
-  error_reporting(E_ALL);
+  // ini_set('display_errors', 1);
+  // ini_set('display_startup_errors', 1);
+  // error_reporting(E_ALL);
   // echo("hello <br>");
   // print_r($_POST);
   // var_dump($_REQUEST);
@@ -10,7 +10,9 @@
 
  
    include_once("db.php");
-
+   
+   session_start();
+   ob_start();
 
    if (!isset($_POST['password']) || !isset($_POST['username']))
    {
@@ -34,7 +36,7 @@
       if(!$veri_password === TRUE){
         echo("Error");
       } else {
-        session_start();
+        
         $_SESSION['login']=$email;
         header("location: cart.php");
       }
