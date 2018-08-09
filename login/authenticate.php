@@ -23,10 +23,20 @@
   $email = $_POST['username'];
   $password = $_POST['password'];
 
+  $cust_query = "SELECT ID FROM Customer WHERE Email='$email'";
+  if ($result = $mysqli->query($cust_query)){
+      
+      $row = mysqli_fetch_assoc($result);
+      //echo($row["ID"]);
+      $_SESSION['customer_id'] = $row["ID"];
+  }
+
+
+
 
   $pass_query = "SELECT password FROM users WHERE email='$email'";
   // $queried = mysql_query($pass_query);
-  echo($pass_query . "<br>");
+  //echo($pass_query . "<br>");
 
   if ($result = $mysqli->query($pass_query)) {
     while ($row = mysqli_fetch_assoc($result)) {

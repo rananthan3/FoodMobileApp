@@ -20,6 +20,9 @@
       </div>
 
       <div data-role="content" data-theme="a">
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" required>
+
         <label for="email"><b>Email</b></label>
         <input type="text" placeholder="Enter Email" name="email" required>
 
@@ -28,6 +31,12 @@
 
         <label for="psw-repeat"><b>Repeat Password</b></label>
         <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+        <label for="phone"><b>Phone</b></label>
+        <input type="text" placeholder="Phone Number" name="phone" required>
+
+        <label for="address"><b>Address</b></label>
+        <input type="text" placeholder="Address" name="address" required>
 
         <label>
           <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me

@@ -172,7 +172,7 @@
     <div role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
 
-           <li><a href="#">
+           <li><a href="items/bread.php">
                 <img src="bread.jpeg" class="ui-li-thumb">
                 <h2>Bread</h2>                
             </a></li>
