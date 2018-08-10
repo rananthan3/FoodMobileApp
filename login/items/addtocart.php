@@ -3,7 +3,21 @@ session_start();
 ?>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style>
+h1 {
+	border-style: solid;
+	border-radius: 25px;
+	border-width: thin;
+	text-align: center;
+	border-color: #8cf442;
+}
+</style>
 </head>
 <body>
 <?php
@@ -58,9 +72,10 @@ ON OrderItem.Product_ID=Product.ID
 WHERE OrderItem.Order_ID = $order_id";
 
 $result = mysqli_query($mysqli,$query);
-
-echo "<table>"; 
-
+echo '<div data-role="page">';
+echo '<div data-role="content">';
+echo '<table data-role="table" class="ui-responsive">'; 
+echo '<thead>';
 echo "<tr>
     <th>Order_ID</th>
     <th>Product_ID</th>
@@ -68,12 +83,15 @@ echo "<tr>
     <th>Price</th>
     <th>Total</th>
   </tr>";
-
+echo '</thead>';
+echo '<tbody>';
 while($row = mysqli_fetch_array($result)){   
 echo "<tr><td>" . $row['Order_ID'] . "</td><td>" . $row['Product_ID'] . "</td><td>". $row['Quantity'] . "</td><td>" . $row['Price'] . "</td><td>" . $row['Total'] ."</td></tr>";  
 }
-
+echo '</tbody>';
 echo "</table>";
+
+
 
 
 $query = "SELECT SUM(Quantity*Price) AS Total FROM OrderItem 
@@ -84,7 +102,10 @@ WHERE OrderItem.Order_ID = $order_id";
 $result = mysqli_query($mysqli,$query);
 $row = mysqli_fetch_array($result);
 
-echo $row[0];
+echo '<br><br>';
+echo '<h1 border: 5px solid red>Grand Total: $' . money_format('%(#10n', $row[0]) . '</h1>';
+
+
 
 $total = $row[0];
 
@@ -110,5 +131,7 @@ $mysqli->close();
 
 
 <a href="../logout.php" rel="external">Logout</a>
+</div>
+</div>
 </body>
 </html>
