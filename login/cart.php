@@ -176,7 +176,7 @@
                 <img src="bread.jpeg" class="ui-li-thumb">
                 <h2>Bread</h2>                
             </a></li>
-            <li><a href="#">
+            <li><a href="items/rice.php">
                 <img src="rice.jpeg" class="ui-li-thumb">
                 <h2>Rice</h2>                
             </a></li>

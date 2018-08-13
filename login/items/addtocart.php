@@ -29,21 +29,30 @@ require_once('../../config.php');
 //var_dump($_GET);
 //echo("hello");
 
-$digits =9;
-$order_id = rand(0, pow(10, $digits)-1);
 
 
+if (!isset($_SESSION['order_id'])){
+	echo "<script>console.log( 'Debug Objects: " . "Not Set" . "' );</script>";
+	$digits =9;
+	$_SESSION['order_id'] = rand(0, pow(10, $digits)-1);
+
+	$order_id = $_SESSION['order_id'];
 
 
-$order_query = "INSERT INTO `Order`(`ID`, `customer_id`) VALUES ('$order_id', '{$_SESSION['customer_id']}')";
+	$order_query = "INSERT INTO `Order`(`ID`, `customer_id`) VALUES ('{$_SESSION['order_id']}', '{$_SESSION['customer_id']}')";
 
-if ($mysqli->query($order_query) === TRUE) {
-    // echo "New record created successfully <br>";
-} else {
-    echo "Error: " . $order_query . "<br>" . $mysqli->error;
+	if ($mysqli->query($order_query) === TRUE) {
+	    // echo "New record created successfully <br>";
+	} else {
+	    echo "Error: " . $order_query . "<br>" . $mysqli->error;
+	}
+
+} else {	
+	echo "<script>console.log( 'Debug Objects: " . $_SESSION['order_id'] . "' );</script>";
 }
 
 
+$order_id = $_SESSION['order_id'];
 
 foreach ($_GET as $key => $value) { 
 	// echo("$key,$value<br>");
@@ -129,7 +138,7 @@ $mysqli->close();
           id="donate-button"></script>
 </form>
 
-
+<a href="../cart.php" rel="external" >Back</a><br>
 <a href="../logout.php" rel="external">Logout</a>
 </div>
 </div>
