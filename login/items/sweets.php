@@ -23,24 +23,24 @@
 
 <form action="addtocart.php" method="get">
 
-  		<img src="../bread.jpeg" height="200" width="200" >
-  		Quantity: <input type="text" name="4807" width="48" id="4807" ><br>	
+  		<img src="../gulab.jpeg" height="200" width="200" >
+  		Quantity: <input type="text" name="4001" width="48" id="4001" ><br>	
   	
   	
-  		<img src="../bread.jpeg" height="200" width="200" >
-  		Quantity: <input type="text" name="4907" width="48" id="4907" ><br>	
+  		<img src="../rasmalai.jpeg" height="200" width="200" >
+  		Quantity: <input type="text" name="4002" width="48" id="4002" ><br>	
   
   	
-  		<img src="../bread.jpeg" height="200" width="200" >
-  		Quantity: <input type="text" name="5007" width="48" id="5007" ><br>	
+  		<img src="../barfi.jpeg" height="200" width="200" >
+  		Quantity: <input type="text" name="4003" width="48" id="4003" ><br>	
   	
   	
-  		<img src="../bread.jpeg" height="200" width="200" >
-  		Quantity: <input type="text" name="6007" width="48" id="6007" ><br>	
+  		<img src="../laddu.jpeg" height="200" width="200" >
+  		Quantity: <input type="text" name="4004" width="48" id="4004" ><br>	
   	
 
  <button type="submit">Add to Cart</button>
 </form>
-<a href="../cart.php" rel="external" >Back</a>
+<a href="../cart.php" rel="external" >Back</a><br>
 </body>
 </html>

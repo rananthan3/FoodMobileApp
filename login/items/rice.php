@@ -23,24 +23,24 @@
 
 <form action="addtocart.php" method="get">
 
-  		<img src="../jasmine.jpeg" height="400" width="400" >
+  		<img src="../jasmine.jpeg" height="200" width="200" >
   		Quantity: <input type="text" name="3001" width="48" id="3001" ><br>	
   	
   	
-  		<img src="../basmati.jpeg" height="400" width="400" >
+  		<img src="../basmati.jpeg" height="200" width="200" >
   		Quantity: <input type="text" name="3002" width="48" id="3002" ><br>	
   
   	
-  		<img src="../white.jpeg" height="400" width="400" >
+  		<img src="../white.jpeg" height="200" width="200" >
   		Quantity: <input type="text" name="3003" width="48" id="3003" ><br>	
   	
   	
-  		<img src="../brown.jpeg" height="400" width="400" >
+  		<img src="../brown.jpeg" height="200" width="200" >
   		Quantity: <input type="text" name="3004" width="48" id="3004" ><br>	
   	
 
  <button type="submit">Add to Cart</button>
 </form>
-
+<a href="../cart.php" rel="external" >Back</a><br>
 </body>
 </html>

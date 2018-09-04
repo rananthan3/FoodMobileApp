@@ -180,7 +180,7 @@
                 <img src="rice.jpeg" class="ui-li-thumb">
                 <h2>Rice</h2>                
             </a></li>
-            <li><a href="#">
+            <li><a href="items/sweets.php">
                 <img src="sweets.jpeg" class="ui-li-thumb">
                 <h2>Sweets</h2>                
             </a></li>
