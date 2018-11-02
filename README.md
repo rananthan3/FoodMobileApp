@@ -94,7 +94,30 @@ https://stripe.com/docs/keys
 
 ###### Integration with AWS S3 (Simple Storage Service)
 
-The files page.php and example-form.php allow you to add images of your farm to S3.  The code contains a non-publishable AWS keys.  If you need to upload images in S3 and find this feature useful, email me at rajan.ananthan@gmail.com.
+The upload and view photos will not work out of the box.  You will need two extra files page.php and example-form.php to have this functionality.  The files page.php and example-form.php allow you to add images of your farm to S3.  The code contains a non-publishable AWS keys.  If you need to upload images in S3 and find this feature useful, email me at rajan.ananthan@gmail.com.
+
+## How to Add Products to Your Inventory
+
+###### Update Tables
+
+INSERT INTO `Product`(`ID`, `Name`, `Description`, `Price`, `Inventory`) VALUES ( 2005,"Corn","Yellow Corn",4.99,60)
+
+###### Create/Edit PHP Files
+
+1. Edit login/cart.php to include your product image
+2. Create a file corn.php in /login/items and include the images of the varieties of corn you have and edit the id and name fields 
+
+For example in corn.php
+
+<img src="../yellowcorn.jpeg" height="200" width="200" >
+Quantity: <input type="text" name="2005" width="48" id="2005" ><br>	
+  	
+  	
+<img src="../purplecorn.jpeg" height="200" width="200" >
+Quantity: <input type="text" name="2006" width="48" id="2006" ><br>	
+
+
+
 
 
 
