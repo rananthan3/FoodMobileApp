@@ -165,22 +165,22 @@
 <div data-role="page" data-theme="b" id="demo-page" class="my-page" data-url="demo-page">
     <div data-role="header">
         <center>
-        <img src="logo.png" alt="Welcome to Suvidha Online" style="width:109px;height:55.5px;">
+        <img src="iamfarms.png" alt="Welcome to IAMFARMS" style="width:109px;height:55.5px;">
         </center>
         <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
     </div><!-- /header -->
     <div role="main" class="ui-content">
         <ul data-role="listview" data-inset="true">
 
-           <li><a href="items/bread.php">
-                <img src="bread.jpeg" class="ui-li-thumb">
-                <h2>Bread</h2>                
+           <li><a href="items/redokra.php">
+                <img src="redokra.jpeg" class="ui-li-thumb">
+                <h2>Red Okra</h2>                
             </a></li>
-            <li><a href="items/rice.php">
-                <img src="rice.jpeg" class="ui-li-thumb">
-                <h2>Rice</h2>                
+            <li><a href="items/greenokra.php">
+                <img src="greenokra.jpeg" class="ui-li-thumb">
+                <h2>Green Okra</h2>                
             </a></li>
-            <li><a href="items/sweets.php">
+        <!--     <li><a href="items/sweets.php">
                 <img src="sweets.jpeg" class="ui-li-thumb">
                 <h2>Sweets</h2>                
             </a></li>
@@ -240,7 +240,7 @@
             <li><a href="#">                
                 <img src="cherry.jpeg" class="ui-li-thumb">
                 <h2>$2.49/lb</h2>                
-            </a></li>
+            </a></li> -->
         </ul>        
     </div><!-- /content -->
     <div data-role="footer" style="text-align: center;">

@@ -1,5 +1,9 @@
 <?php
 session_start();
+
+$_SESSION["products"]=$_GET;
+
+
 ?>
 <html>
 <head>
@@ -9,6 +13,9 @@ session_start();
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+
+
 <style>
 h1 {
 	border-style: solid;
@@ -23,11 +30,13 @@ h1 {
 <?php
 
 
+
 include_once('../db.php');
 require_once('../../config.php');
 
-//var_dump($_GET);
-//echo("hello");
+
+
+
 
 
 
@@ -75,7 +84,7 @@ if ($mysqli->query($query) === TRUE) {
 }
 
 
-$query = "SELECT Order_ID, Product_ID, Quantity, Price, Quantity*Price AS Total FROM OrderItem 
+$query = "SELECT Name, Order_ID, Product_ID, Quantity, Price, Quantity*Price AS Total FROM OrderItem 
 LEFT JOIN Product 
 ON OrderItem.Product_ID=Product.ID 
 WHERE OrderItem.Order_ID = $order_id";
@@ -86,16 +95,17 @@ echo '<div data-role="content">';
 echo '<table data-role="table" class="ui-responsive">'; 
 echo '<thead>';
 echo "<tr>
+	<th>Name</th>
     <th>Order_ID</th>
     <th>Product_ID</th>
-    <th>Quantity</th>
+    <th>Quantity (lbs)</th>
     <th>Price</th>
     <th>Total</th>
   </tr>";
 echo '</thead>';
 echo '<tbody>';
 while($row = mysqli_fetch_array($result)){   
-echo "<tr><td>" . $row['Order_ID'] . "</td><td>" . $row['Product_ID'] . "</td><td>". $row['Quantity'] . "</td><td>" . $row['Price'] . "</td><td>" . $row['Total'] ."</td></tr>";  
+echo "<tr><td>" . $row['Name'] . "</td><td>" . $row['Order_ID'] . "</td><td>" . $row['Product_ID'] . "</td><td>". $row['Quantity'] . "</td><td>" . $row['Price'] . "</td><td>" . $row['Total'] ."</td></tr>";  
 }
 echo '</tbody>';
 echo "</table>";
@@ -120,6 +130,47 @@ $total = $row[0];
 
 
 
+
+
+
+
+foreach($_GET as $key => $value){
+   echo "$key: $value<br><br>";
+
+   $query = "SELECT Inventory FROM Product WHERE ID=" . $key;
+   $result = mysqli_query($mysqli,$query);
+   echo $mysqli->error;
+   $row = $result->fetch_assoc();
+
+   if (!isset($_SESSION['OriginalInventory'][$key]))
+	{
+	    $_SESSION["OriginalInventory"][$key] = $row["Inventory"];
+
+	}
+
+   
+   $new_inventory = $row["Inventory"] - $value;
+   
+
+   $query = "UPDATE Product SET Inventory = " . $new_inventory . " WHERE `ID`=" . $key;
+   echo $query . "<br><br>";
+   mysqli_query($mysqli,$query);
+   echo $mysqli->error . "<br><br>";
+
+
+   if ($new_inventory < 0 ){
+	   $query = "SELECT Name FROM Product WHERE ID=" . $key;
+	   $result = mysqli_query($mysqli,$query);
+	   $row = $result->fetch_assoc();
+
+	   	echo '<font color="red">Sorry, We are out of ' . $row["Name"] . ".</font><br>";
+   }
+}
+
+
+
+
+
 $mysqli->close();
 
 
@@ -133,9 +184,13 @@ $mysqli->close();
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<?php echo $stripe['publishable_key']; ?>"
           data-amount="<?php echo $total *100?>"
-          data-description="Access for a year"         
+          data-description="IAMFARMS Organic"         
           data-locale="auto" 
           id="donate-button"></script>
+</form>
+
+<form action="delete.php">
+  <button type="submit">Delete Order</button>  
 </form>
 
 <a href="../cart.php" rel="external" >Back</a><br>
@@ -144,3 +199,4 @@ $mysqli->close();
 </div>
 </body>
 </html>
+

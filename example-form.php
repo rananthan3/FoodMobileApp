@@ -19,8 +19,8 @@
 if (!class_exists('S3')) require_once 'S3.php';
 
 // AWS access info
-if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAJYQCOKLGWWOD47YQ');
-if (!defined('awsSecretKey')) define('awsSecretKey', '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');
+if (!defined('awsAccessKey')) define('awsAccessKey', 'AKIAJULRU56BHSXGSZKQ');
+if (!defined('awsSecretKey')) define('awsSecretKey', '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');
 
 // Check for CURL
 if (!extension_loaded('curl') && !@dl(PHP_SHLIB_SUFFIX == 'so' ? 'curl.so' : 'php_curl.dll'))
