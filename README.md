@@ -10,11 +10,15 @@ Description:	Linux Mint 18.3 Sylvia
 Release:	18.3
 Codename:	sylvia
 
+###### Installing LAMP
+
 The first step is to install the LAMP stack.  LAMP stands for Linux, Apache, MySQL, and PHP.  You can find more here:
 
 https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 
 Once the LAMP stack is installed, the next step is to import the table schemas as they are shown below:
+
+###### Create MySQL Tables
 
 CREATE TABLE `Customer` (
   `ID` int(11) NOT NULL,
@@ -35,7 +39,7 @@ CREATE TABLE `Order` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 
-OrderItem | CREATE TABLE `OrderItem` (
+CREATE TABLE `OrderItem` (
   `ID` int(11) NOT NULL AUTO_INCREMENT,
   `Order_ID` int(11) NOT NULL,
   `Product_ID` int(11) NOT NULL,
@@ -48,7 +52,7 @@ OrderItem | CREATE TABLE `OrderItem` (
 ) ENGINE=InnoDB AUTO_INCREMENT=274 DEFAULT CHARSET=latin1
 
 
-Product | CREATE TABLE `Product` (
+CREATE TABLE `Product` (
   `ID` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
   `Description` text,
@@ -58,5 +62,21 @@ Product | CREATE TABLE `Product` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 
+CREATE TABLE `data` (
+  `Email` varchar(100) NOT NULL,
+  `Item` varchar(100) NOT NULL,
+  `Zip` varchar(5) NOT NULL,
+  `Price` double(9,2) NOT NULL,
+  `Date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `data` (
+  `Email` varchar(100) NOT NULL,
+  `Item` varchar(100) NOT NULL,
+  `Zip` varchar(5) NOT NULL,
+  `Price` double(9,2) NOT NULL,
+  `Date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 [Visit Us](http://foodio.000webhostapp.com)
