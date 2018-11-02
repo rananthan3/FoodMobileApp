@@ -79,4 +79,23 @@ CREATE TABLE `data` (
   `Date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
+
+###### Update Database Connection Parameters
+
+Update dp.php in the /login folder to include the user, password, and database in which the tables were created.
+
+
+###### Integration with Stripe
+
+Update config.php in the /login folder to add stripe key parameters
+
+https://stripe.com/docs/keys
+
+
+###### Integration with AWS S3 (Simple Storage Service)
+
+The files page.php and example-form.php allow you to add images of your farm to S3.  The code contains a non-publishable AWS keys.  If you need to upload images in S3 and find this feature useful, email me at rajan.ananthan@gmail.com.
+
+
+
 [Visit Us](http://foodio.000webhostapp.com)
