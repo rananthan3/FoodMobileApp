@@ -96,6 +96,8 @@ Update config.php in the /login folder to add stripe key parameters
 
 https://stripe.com/docs/keys
 
+https://stripe.com/docs/checkout/php
+
 
 ###### Integration with AWS S3 (Simple Storage Service)
 
