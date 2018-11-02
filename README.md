@@ -20,6 +20,8 @@ Once the LAMP stack is installed, the next step is to import the table schemas a
 
 ###### Create MySQL Tables
 
+A script shown below automates the following:
+
 CREATE TABLE `Customer` (
   `ID` int(11) NOT NULL,
   `Name` text NOT NULL,
@@ -71,14 +73,17 @@ CREATE TABLE `data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
 
 
-CREATE TABLE `data` (
-  `Email` varchar(100) NOT NULL,
-  `Item` varchar(100) NOT NULL,
-  `Zip` varchar(5) NOT NULL,
-  `Price` double(9,2) NOT NULL,
-  `Date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
 
+
+You can find these files in table.sql and import them using the following:
+
+mysql -u username -p database_name < table.sql
 
 ###### Update Database Connection Parameters
 
