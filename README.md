@@ -88,7 +88,7 @@ mysql -u username -p demo < demo.sql
 
 ###### Update Database Connection Parameters
 
-Update dp.php in the /login folder to include the user, password, and database in which the tables were created.
+Update db.php in the /login folder to include the user, password, and database in which the tables were created.
 
 
 ###### Integration with Stripe
