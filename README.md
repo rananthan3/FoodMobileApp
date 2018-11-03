@@ -83,7 +83,7 @@ CREATE TABLE `users` (
 
 You can find these files in table.sql and import them using the following:
 
-mysql -u username -p database_name < table.sql
+mysql -u username -p database_name < demo.sql
 
 ###### Update Database Connection Parameters
 
