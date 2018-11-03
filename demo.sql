@@ -84,7 +84,8 @@ CREATE TABLE `Product` (
   `ID` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
   `Description` text,
-  `Price` decimal(10,2) NOT NULL
+  `Price` decimal(10,2) NOT NULL,
+  `Inventory` int(11)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
