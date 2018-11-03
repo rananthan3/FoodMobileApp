@@ -12,6 +12,8 @@ Codename:	sylvia
 
 ###### Installing LAMP
 
+Please refer to the Food Mobile App Getting Started pdf for detailed instructions.
+
 The first step is to install the LAMP stack.  LAMP stands for Linux, Apache, MySQL, and PHP.  You can find more here:
 
 https://en.wikipedia.org/wiki/LAMP_(software_bundle)
