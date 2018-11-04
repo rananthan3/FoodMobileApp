@@ -162,10 +162,10 @@
 
 
 
-<div data-role="page" data-theme="b" id="demo-page" class="my-page" data-url="demo-page">
+<div data-role="page" data-theme="b" id="demo-page" class="my-page" >
     <div data-role="header">
         <center>
-        <img src="iamfarms.png" alt="Welcome to IAMFARMS" style="width:109px;height:55.5px;">
+        <img src="/images/iamfarms.png" alt="Welcome to IAMFARMS" style="width:109px;height:55.5px;">
         </center>
         <a href="./" data-shadow="false" data-iconshadow="false" data-icon="carat-l" data-iconpos="notext" data-rel="back" data-ajax="false">Back</a>
     </div><!-- /header -->
@@ -173,11 +173,11 @@
         <ul data-role="listview" data-inset="true">
 
            <li><a href="items/redokra.php">
-                <img src="redokra.jpeg" class="ui-li-thumb">
+                <img src="/images/redokra.jpeg" class="ui-li-thumb">
                 <h2>Red Okra</h2>                
             </a></li>
             <li><a href="items/greenokra.php">
-                <img src="greenokra.jpeg" class="ui-li-thumb">
+                <img src="/images/greenokra.jpeg" class="ui-li-thumb">
                 <h2>Green Okra</h2>                
             </a></li>
         <!--     <li><a href="items/sweets.php">

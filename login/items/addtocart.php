@@ -56,14 +56,14 @@ if (!isset($_SESSION['order_id'])){
 	    echo "Error: " . $order_query . "<br>" . $mysqli->error;
 	}
 
-} else {	
+} else {
 	echo "<script>console.log( 'Debug Objects: " . $_SESSION['order_id'] . "' );</script>";
 }
 
 
 $order_id = $_SESSION['order_id'];
 
-foreach ($_GET as $key => $value) { 
+foreach ($_GET as $key => $value) {
 	// echo("$key,$value<br>");
 	$sql[] = '("'.$order_id.'","'.mysqli_real_escape_string($mysqli,$key).'", '.mysqli_real_escape_string($mysqli,$value).')';
 
@@ -148,9 +148,9 @@ foreach($_GET as $key => $value){
 
 	}
 
-   
+
    $new_inventory = $row["Inventory"] - $value;
-   
+
 
    $query = "UPDATE Product SET Inventory = " . $new_inventory . " WHERE `ID`=" . $key;
    echo $query . "<br><br>";
@@ -184,13 +184,13 @@ $mysqli->close();
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<?php echo $stripe['publishable_key']; ?>"
           data-amount="<?php echo $total *100?>"
-          data-description="IAMFARMS Organic"         
-          data-locale="auto" 
+          data-description="IAMFARMS Organic"
+          data-locale="auto"
           id="donate-button"></script>
 </form>
 
 <form action="delete.php">
-  <button type="submit">Delete Order</button>  
+  <button type="submit">Delete Order</button>
 </form>
 
 <a href="../cart.php" rel="external" >Back</a><br>

@@ -10,28 +10,16 @@
 </head>
 <body>
 
-<!-- <div data-role="page" data-theme="a">
-	<img src="../greenokra.jpg" class="ui-li-thumb">
-	<form action="addtocart.php" method="post">
-	Quantity: <input type="text" name="name" style="width:200px;"><br>
-	<button name="subject" type="submit" value="Add to Cart">Add to Cart</button>
-	</form>
-
-
-
-</div> -->
 
 <form action="addtocart.php" method="get">
 
-  		<img src="../greenokra.jpeg" height="200" width="200" >
-  		Quantity: <input type="text" name="6666" width="48" id="6666" ><br>	
-  	
-  	
-
-  	
+  		<img src="/images/greenokra.jpeg" height="200" width="200" >
+  		Quantity: <input type="text" name="6666" width="48" id="6666" ><br>
 
  <button type="submit">Add to Cart</button>
 </form>
+
 <a href="../cart.php" rel="external" >Back</a><br>
+
 </body>
 </html>

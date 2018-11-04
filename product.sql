@@ -1,9 +1,11 @@
-INSERT INTO `Product`(`ID`, `Name`, `Description`, `Price`) VALUES ('3001', 'Jasmine Rice', 'Jasmine', 6.99), 
-('3002', 'Basmati Rice', 'Basmati', 7.99), 
-('3003', 'White Rice', 'White', 9.99), 
-('3004', 'Brown Rice', 'Brown', 9.99)
+/* Example .SQL to Add Product 
 
-INSERT INTO `Product`(`ID`, `Name`, `Description`, `Price`) VALUES ('4001', 'Gulab', 'Gulab', 6.99), 
-('4002', 'Ras Malai', 'Ras Malai', 7.99), 
-('4003', 'Barfi', 'Barfi', 9.99), 
-('4004', 'Laddu', 'Laddu', 9.99)
+Usage 
+
+mysql -u root -p demo < product.sql
+
+*/
+
+INSERT INTO `Product`(`ID`, `Name`, `Description`, `Price`, `Inventory`) 
+VALUES ('6667', 'Red Okra', 'Red Okra', 6.99, 100), 
+('6666', 'Green Okra', 'Green Okra', 7.99, 100) 
