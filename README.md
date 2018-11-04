@@ -119,11 +119,11 @@ INSERT INTO `Product`(`ID`, `Name`, `Description`, `Price`, `Inventory`) VALUES 
 For example in corn.php
 
 ```html
-<img src="../yellowcorn.jpeg" height="200" width="200" >
+<img src="/images/yellowcorn.jpeg" height="200" width="200" >
 Quantity: <input type="text" name="2005" width="48" id="2005" ><br>	
   	
   	
-<img src="../purplecorn.jpeg" height="200" width="200" >
+<img src="/images/purplecorn.jpeg" height="200" width="200" >
 Quantity: <input type="text" name="2006" width="48" id="2006" ><br>	
 ```
 
