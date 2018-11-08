@@ -16,6 +16,8 @@ The first step is to install the LAMP stack.  LAMP stands for Linux, Apache, MyS
 
 https://en.wikipedia.org/wiki/LAMP_(software_bundle)
 
+Refer to the Getting Started Guide for instructions.
+
 Once the LAMP stack is installed, the next step is to import the table schemas as they are shown below:
 
 ###### Create MySQL Tables
