@@ -48,3 +48,24 @@ CREATE  TABLE IF NOT EXISTS `demo`.`OrderItem` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
+
+
+
+CREATE TABLE `demo`.`data` (
+  `Email` varchar(100) NOT NULL,
+  `Item` varchar(100) NOT NULL,
+  `Zip` varchar(5) NOT NULL,
+  `Price` double(9,2) NOT NULL,
+  `Date` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+
+CREATE TABLE `demo`.`users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1
+
+
+
