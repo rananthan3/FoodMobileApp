@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 -- Database: `demo`
 --
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -84,7 +86,8 @@ CREATE TABLE `Product` (
   `ID` int(11) NOT NULL,
   `Name` varchar(45) NOT NULL,
   `Description` text,
-  `Price` decimal(10,2) NOT NULL
+  `Price` decimal(10,2) NOT NULL,
+  `Inventory` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
